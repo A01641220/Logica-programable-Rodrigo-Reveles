@@ -15,14 +15,14 @@ Muestra el resultado directamente en la tarjeta FPGA.
 
 El sistema permite visualizar en tiempo real el resultado de la combinación binaria ingresada desde hardware físico.
 
-Funcionamiento del Sistema
-Entradas
+#Funcionamiento del Sistema
+#Entradas
 
 10 switches físicos de la FPGA.
 
 Cada switch representa una señal binaria (1 o 0).
 
-Procesamiento
+#Procesamiento
 
 Las 10 entradas binarias se interpretan como una señal tipo decoder.
 
@@ -30,7 +30,7 @@ El sistema traduce esa combinación a una salida codificada de 4 bits.
 
 Esa salida se convierte a señales compatibles con display de 7 segmentos.
 
-Salidas
+#Salidas
 
 4 displays de 7 segmentos.
 
