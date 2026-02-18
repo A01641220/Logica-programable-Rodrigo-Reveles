@@ -15,7 +15,7 @@ Muestra el resultado directamente en la tarjeta FPGA.
 
 El sistema permite visualizar en tiempo real el resultado de la combinación binaria ingresada desde hardware físico.
 
-**Funcionamiento del Sistema**
+**⚙️Funcionamiento del Sistema**
 
 **Entradas**
 
