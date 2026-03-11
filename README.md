@@ -1,6 +1,19 @@
-# SERVO
+# RODRIGO ARMANDO REVELES PICIE "PADRE DE QUARTUS"
 
 
-Esta práctica consistió en el diseño e implementación de un controlador de servomotor utilizando lenguaje de descripción de hardware Verilog sobre una FPGA. El objetivo principal fue lograr que el usuario pudiera indicar un ángulo específico, por ejemplo 90 grados, a través de los interruptores (switches) de la placa y que el motor respondiera posicionándose exactamente en dicho ángulo. Para garantizar la precisión temporal necesaria en este tipo de dispositivos, el sistema integra un divisor de frecuencia que transforma la señal del oscilador base de la placa en una frecuencia de reloj de 25 MHz exactos. Esta base de tiempo es fundamental, ya que permite que cada ciclo de reloj equivalga a 40 nanosegundos, facilitando el cálculo de los anchos de pulso requeridos por el protocolo PWM.
+Aquí tienes el texto para tu archivo README.md, redactado de forma profesional y organizada para que cualquier persona que visite tu repositorio entienda qué contiene y cómo está estructurado.
 
-La lógica de control se basa en un contador digital encargado de modular el ancho del pulso dentro de un periodo constante de 20 milisegundos, lo que equivale a una frecuencia de actualización de 50 Hz. El comportamiento del servo se rige por una ecuación lineal programada en el bloque de asignación, la cual mapea el número binario introducido por los switches directamente a una cantidad de ciclos de reloj. En este diseño, se ajustó la matemática para que el rango de entrada de 0 a 180 coincida con los límites físicos del motor, que típicamente oscilan entre los 0.6 y 2.4 milisegundos. De esta manera, al ingresar el valor decimal 90, el sistema calcula automáticamente el ciclo de trabajo correspondiente a 1.5 milisegundos, enviando la señal de control a través de un pin de salida digital (similar a la lógica de un Arduino pero ejecutada a nivel de hardware) para posicionar el eje del servomotor en su punto central.
+Repositorio de Prácticas en Verilog
+Este repositorio contiene el registro completo de las prácticas de diseño digital realizadas durante el curso, enfocadas en la implementación de sistemas embebidos y lógica programable utilizando lenguaje de descripción de hardware Verilog. Cada proyecto incluye los archivos fuente de los módulos lógicos, así como sus respectivos bancos de prueba (Testbench) para la validación mediante simulación.
+
+Descripción General
+El objetivo de este espacio es documentar el proceso de aprendizaje y desarrollo de hardware, abarcando desde lógica combinacional básica hasta sistemas secuenciales complejos. Entre los proyectos más destacados se encuentra el controlador de servomotores de alta precisión, el cual utiliza un divisor de frecuencia dedicado para obtener un reloj de 25 MHz. Este módulo permite transformar una entrada numérica de 8 bits (proveniente de switches) directamente en una posición angular (0° a 180°), modulando el pulso PWM mediante contadores de alta velocidad para garantizar una respuesta exacta del actuador.
+
+Estructura del Repositorio
+Para facilitar la navegación y el uso de los archivos, el repositorio se organiza de la siguiente manera:
+
+Source Files (.v): Contiene los archivos de diseño principal, incluyendo divisores de frecuencia, módulos PWM y decodificadores.
+
+Testbenches (_tb.v): Incluye los archivos de simulación necesarios para verificar el comportamiento de los módulos en entornos como ModelSim o Vivado. Se han configurado con los tiempos de simulación adecuados para observar fenómenos de larga duración, como los periodos de 20ms en señales PWM.
+
+Documentación: Breves descripciones dentro de cada carpeta que detallan los cálculos matemáticos (ecuaciones de mapeo) y las restricciones de pines aplicadas a la FPGA.
