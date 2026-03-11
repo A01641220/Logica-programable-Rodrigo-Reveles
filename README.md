@@ -1,9 +1,7 @@
 # RODRIGO ARMANDO REVELES PICIE "PADRE DE QUARTUS"
 
 
-Aquí tienes el texto para tu archivo README.md, redactado de forma profesional y organizada para que cualquier persona que visite tu repositorio entienda qué contiene y cómo está estructurado.
-
-Repositorio de Prácticas en Verilog
+# Repositorio de Prácticas en Verilog
 Este repositorio contiene el registro completo de las prácticas de diseño digital realizadas durante el curso, enfocadas en la implementación de sistemas embebidos y lógica programable utilizando lenguaje de descripción de hardware Verilog. Cada proyecto incluye los archivos fuente de los módulos lógicos, así como sus respectivos bancos de prueba (Testbench) para la validación mediante simulación.
 
 Descripción General
